@@ -1,5 +1,18 @@
+$primary-color: #8B0000;
+$secondary-color: #FFD700;
+$tertiary-color: #FF69B4;
+$quaternary-color: #4B0082;
+$light-color: #FFF5EE;
+$black: #000000;
+$transition-time: 0.3s;
+
+*:focus {
+    outline: none;
+    box-shadow: none;
+}
+
 html {
-    background-color: #584ea8;
+    background-color: $primary-color;
 }
 
 html,
@@ -13,7 +26,15 @@ body {
 
 body {
     font-family: Roboto, 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: $light-color;
+    color: $black;
     overflow-x: hidden;
+    background: linear-gradient(45deg, $primary-color, $secondary-color, $tertiary-color, $quaternary-color);
+    background-size: 300% 300%;
+    background-repeat: no-repeat;
+    animation: gradientAnimation 16s ease infinite;
 }
 
 
@@ -22,10 +43,22 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #a88bc3;
+    background-color: $secondary-color;
     border-radius: 15px;
 }
 
 body::-webkit-scrollbar-thumb:active {
-    background-color: #4d3f5a;
+    background-color: #25053d;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }

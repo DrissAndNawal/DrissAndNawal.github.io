@@ -1,1 +1,67 @@
-<div>Driss And Nawal</div>
+<app-heart-animation></app-heart-animation>
+<header class="header" [class.sticky]="isHeaderSticky">
+  <nav class="nav-container">
+    <a routerLink="/itineraries" class="nav-link">Itineraries</a>
+    <a routerLink="/map" class="nav-link">Map</a>
+    <a routerLink="/songs" class="nav-link">Songs</a>
+    <a routerLink="/actors" class="nav-link">Family & Friends</a>
+    <a routerLink="/media" class="nav-link">Media</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content" @fadeInOut>
+    <h1 class="names">
+      <span>Driss & Nawal</span>
+      <span>Are Getting Married</span>
+    </h1>
+    <div class="date-location">
+      <p>July 19, 2024 • Tunis, Tunisia</p>
+    </div>
+    <div class="countdown">
+      <div class="countdown-item">
+        <div class="number">{{countdown.days}}</div>
+        <div class="label">Days</div>
+      </div>
+      <div class="countdown-item">
+        <div class="number">{{countdown.hours}}</div>
+        <div class="label">Hours</div>
+      </div>
+      <div class="countdown-item">
+        <div class="number">{{countdown.minutes}}</div>
+        <div class="label">Minutes</div>
+      </div>
+      <div class="countdown-item">
+        <div class="number">{{countdown.seconds}}</div>
+        <div class="label">Seconds</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section our-story">
+  <div class="story-content" @fadeInOut>
+    <h2 class="section-title">Our Story</h2>
+    <p>The story of Driss and Nawal (too lazy to type this out rn ngl).</p>
+  </div>
+</section>
+
+<div class="quick-links">
+  <div class="link-card" @fadeInOut>
+    <h3>Wedding Itinerary</h3>
+    <p>Find detailed information about all wedding events, including the Henna ceremony and main celebration.</p>
+    <a routerLink="/itineraries" class="btn">View Schedule</a>
+  </div>
+  
+  <div class="link-card" @fadeInOut>
+    <h3>Explore Tunis</h3>
+    <p>Discover recommended places to visit, eat, and stay during your time in Tunis.</p>
+    <a routerLink="/map" class="btn">View Map</a>
+  </div>
+  
+  <div class="link-card" @fadeInOut>
+    <h3>Traditional Songs</h3>
+    <p>Learn the classic Tunisian songs that will be part of our celebration.</p>
+    <a routerLink="/songs" class="btn">Listen & Learn</a>
+  </div>
+</div>
