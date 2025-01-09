@@ -18,7 +18,8 @@ $black: #000000;
 
 html {
     background-color: $quaternary-color;
-    overflow: hidden;
+    overflow-x: hidden;
+    height: 100vh;
 }
 
 html,
