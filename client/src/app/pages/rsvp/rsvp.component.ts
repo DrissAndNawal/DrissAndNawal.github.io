@@ -2,13 +2,22 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import emailjs from 'emailjs-com';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-rsvp',
   standalone: true,
   imports: [FormsModule],
   templateUrl: './rsvp.component.html',
-  styleUrl: './rsvp.component.scss'
+  styleUrl: './rsvp.component.scss',
+  animations: [
+    trigger('fadeInOut', [
+      state('void', style({ opacity: 0, transform: 'translateY(20px)' })),
+      transition(':enter', [
+        animate('0.6s ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
+      ])
+    ])
+  ]
 })
 export class RsvpComponent {
   rsvp = {

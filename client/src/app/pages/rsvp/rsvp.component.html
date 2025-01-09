@@ -2,14 +2,14 @@
   <nav class="nav-container">
     <a routerLink="/map" class="nav-link">Map</a>
     <a routerLink="/songs" class="nav-link">Songs</a>
-    <a routerLink="/actors" class="nav-link">Family & Friends</a>
+    <a routerLink="/actors" class="nav-link">Attendees</a>
     <a routerLink="/media" class="nav-link">Media</a>
   </nav>
 </header>
 
 <section class="hero">
   <div class="rsvp">
-    <div class="rsvp-content">
+    <div class="rsvp-content" @fadeInOut>
       <h2 class="section-title">
         <span class="rsvp-text">RSVP</span>
         <div class="arrow-container">
@@ -39,25 +39,43 @@
       <form (ngSubmit)="onSubmit()" #rsvpForm="ngForm" class="rsvp-form">
         <div class="form-group checkbox-group">
           <label for="attending">I will be attending the wedding.</label>
-          <input type="checkbox" id="attending" [(ngModel)]="rsvp.attending" name="attending">
+          <div class="checkbox-wrapper-12">
+            <div class="cbx">
+              <input checked="" type="checkbox" id="attending" [(ngModel)]="rsvp.attending" name="attending">
+              <label for="cbx-12"></label>
+              <svg fill="none" viewBox="0 0 15 14" height="14" width="15">
+                <path d="M2 8.36364L6.23077 12L13 2"></path>
+              </svg>
+            </div>
+            
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="goo-12">
+                  <feGaussianBlur result="blur" stdDeviation="4" in="SourceGraphic"></feGaussianBlur>
+                  <feColorMatrix result="goo-12" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" mode="matrix" in="blur"></feColorMatrix>
+                  <feBlend in2="goo-12" in="SourceGraphic"></feBlend>
+                </filter>
+              </defs>
+            </svg>
+          </div>
         </div>
         <div class="form-group">
           <label for="name">Name:</label>
-          <input type="text" id="name" required [(ngModel)]="rsvp.name" name="name" placeholder="Enter your full name">
+          <input class="input" type="text" id="name" required [(ngModel)]="rsvp.name" name="name" placeholder="Enter your full name">
         </div>
         <div class="form-group">
           <label for="email">Email:</label>
-          <input type="email" id="email" required [(ngModel)]="rsvp.email" name="email" placeholder="Enter your email">
+          <input class="input" type="email" id="email" required [(ngModel)]="rsvp.email" name="email" placeholder="Enter your email">
         </div>
         <div class="form-group">
           <label for="guests">Number of Guests:</label>
-          <input type="number" id="guests" [(ngModel)]="rsvp.guests" name="guests" placeholder="Guests (e.g., 1)">
+          <input class="input" type="number" id="guests" [(ngModel)]="rsvp.guests" name="guests" placeholder="Guests (e.g., 1)">
         </div>
         <div class="form-group">
           <label for="message">Message:</label>
-          <input type="text" id="message" [(ngModel)]="rsvp.message" name="message" placeholder="Leave a message to the bride and groom ?">
+          <input class="input" type="text" id="message" [(ngModel)]="rsvp.message" name="message" placeholder="Leave a message to the bride and groom ?">
         </div>
-        <button type="submit" class="submit-btn">Submit</button>
+        <button type="submit" class="submit-btn" [disabled]="!rsvpForm.form.valid">Submit</button>
       </form>
     </div>
   </div>
