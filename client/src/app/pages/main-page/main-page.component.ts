@@ -1,8 +1,8 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { trigger, state, style, animate, transition } from '@angular/animations';
-import { HeartAnimationComponent } from './heart-animation.component';
+import { HeartAnimationComponent } from '@app/components/heart-animation/heart-animation.component';
 
 @Component({
   selector: 'app-main-page',
@@ -20,19 +20,13 @@ import { HeartAnimationComponent } from './heart-animation.component';
   ]
 })
 export class MainPageComponent implements OnInit {
-  weddingDate = new Date('2024-07-19');
+  weddingDate = new Date('2024-07-20');
   countdown: { days: number; hours: number; minutes: number; seconds: number } = {
     days: 0,
     hours: 0,
     minutes: 0,
     seconds: 0
   };
-  isHeaderSticky = false;
-
-  @HostListener('window:scroll')
-  onWindowScroll() {
-    this.isHeaderSticky = window.pageYOffset > 50;
-  }
 
   ngOnInit() {
     this.updateCountdown();

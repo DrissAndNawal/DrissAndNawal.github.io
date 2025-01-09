@@ -25,6 +25,8 @@ This project is designed to celebrate the wedding of Driss Benzekri and Nawal Sa
    - Wedding invitation with details about the ceremony.
    - Brief introduction to the couple.
    - Quick links to other pages.
+   - Automatic RSVP submissions.
+   ![RSVP Submission Preview](/doc/RSVP.png)  
 
 2. **Itineraries**
    - Recommendations for restaurants, cafes, and attractions in Tunis.

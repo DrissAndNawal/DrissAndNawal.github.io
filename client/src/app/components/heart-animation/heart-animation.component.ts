@@ -56,7 +56,7 @@ export class HeartAnimationComponent implements OnInit, OnDestroy {
     heart.style.left = Math.random() * 100 + "vw";
     heart.style.animationDuration = Math.random() * 2 + 5 + "s";
     
-    heart.innerText = '💗';
+    heart.innerText = '🤍';
     
     const container = document.querySelector('.hearts-container');
     if (container) {

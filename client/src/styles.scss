@@ -1,18 +1,19 @@
-$primary-color: #8B0000;
-$secondary-color: #FFD700;
+$primary-color: #FFC0CB;
+$secondary-color: #FFB6C1;
 $tertiary-color: #FF69B4;
-$quaternary-color: #4B0082;
+$quaternary-color: #FF1493;
+$quinary-color: #FFF0F5;
+$senary-color: #FFFFFF;
 $light-color: #FFF5EE;
 $black: #000000;
-$transition-time: 0.3s;
 
 *:focus {
     outline: none;
     box-shadow: none;
 }
 
-html {
-    background-color: $primary-color;
+* {
+    user-select: none;
 }
 
 html,
@@ -26,17 +27,9 @@ body {
 
 body {
     font-family: Roboto, 'Helvetica Neue', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: $light-color;
     color: $black;
     overflow-x: hidden;
-    background: linear-gradient(45deg, $primary-color, $secondary-color, $tertiary-color, $quaternary-color);
-    background-size: 300% 300%;
-    background-repeat: no-repeat;
-    animation: gradientAnimation 16s ease infinite;
 }
-
 
 body::-webkit-scrollbar {
     width: 12px;
@@ -61,4 +54,15 @@ body::-webkit-scrollbar-thumb:active {
     100% {
         background-position: 0% 50%;
     }
+}
+
+footer {
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px 0;
+    letter-spacing: 2px;
+    text-shadow: 0 0 4px black;
 }

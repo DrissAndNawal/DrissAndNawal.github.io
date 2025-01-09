@@ -1,7 +1,6 @@
 <app-heart-animation></app-heart-animation>
-<header class="header" [class.sticky]="isHeaderSticky">
+<header class="header">
   <nav class="nav-container">
-    <a routerLink="/itineraries" class="nav-link">Itineraries</a>
     <a routerLink="/map" class="nav-link">Map</a>
     <a routerLink="/songs" class="nav-link">Songs</a>
     <a routerLink="/actors" class="nav-link">Family & Friends</a>
@@ -10,15 +9,15 @@
 </header>
 
 <section class="hero">
-  <div class="hero-content" @fadeInOut>
-    <h1 class="names">
+  <div class="hero-content">
+    <h1 class="names" @fadeInOut>
       <span>Driss & Nawal</span>
       <span>Are Getting Married</span>
     </h1>
-    <div class="date-location">
-      <p>July 19, 2024 • Tunis, Tunisia</p>
+    <div class="date-location" @fadeInOut>
+      <p>July 20, 2024 • Tunis, Tunisia</p>
     </div>
-    <div class="countdown">
+    <div class="countdown" @fadeInOut>
       <div class="countdown-item">
         <div class="number">{{countdown.days}}</div>
         <div class="label">Days</div>
@@ -36,32 +35,31 @@
         <div class="label">Seconds</div>
       </div>
     </div>
+    <div class="rsvp">
+      <a href="/rsvp">
+        <button class="cta">
+          <span class="hover-underline-animation"> RSVP </span>
+          <svg
+            id="arrow-horizontal"
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="10"
+            viewBox="0 0 46 16"
+          >
+            <path
+              id="Path_10"
+              data-name="Path 10"
+              d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+              transform="translate(30)"
+              fill="white"
+            ></path>
+          </svg>
+        </button>
+      </a>
+    </div>
   </div>
 </section>
 
-<section class="section our-story">
-  <div class="story-content" @fadeInOut>
-    <h2 class="section-title">Our Story</h2>
-    <p>The story of Driss and Nawal (too lazy to type this out rn ngl).</p>
-  </div>
-</section>
-
-<div class="quick-links">
-  <div class="link-card" @fadeInOut>
-    <h3>Wedding Itinerary</h3>
-    <p>Find detailed information about all wedding events, including the Henna ceremony and main celebration.</p>
-    <a routerLink="/itineraries" class="btn">View Schedule</a>
-  </div>
-  
-  <div class="link-card" @fadeInOut>
-    <h3>Explore Tunis</h3>
-    <p>Discover recommended places to visit, eat, and stay during your time in Tunis.</p>
-    <a routerLink="/map" class="btn">View Map</a>
-  </div>
-  
-  <div class="link-card" @fadeInOut>
-    <h3>Traditional Songs</h3>
-    <p>Learn the classic Tunisian songs that will be part of our celebration.</p>
-    <a routerLink="/songs" class="btn">Listen & Learn</a>
-  </div>
-</div>
+<!-- <footer>
+  <p>&copy; 2024 Omar Benzekri. All rights reserved.</p>
+</footer> -->
