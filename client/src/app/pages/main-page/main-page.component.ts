@@ -20,7 +20,7 @@ import { HeartAnimationComponent } from '@app/components/heart-animation/heart-a
   ]
 })
 export class MainPageComponent implements OnInit {
-  weddingDate = new Date('2024-07-20');
+  weddingDate = new Date('2025-07-20');
   countdown: { days: number; hours: number; minutes: number; seconds: number } = {
     days: 0,
     hours: 0,
