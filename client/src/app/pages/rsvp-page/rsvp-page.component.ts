@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import emailjs from 'emailjs-com';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-rsvp',
   standalone: true,
-  imports: [FormsModule],
-  templateUrl: './rsvp.component.html',
-  styleUrl: './rsvp.component.scss',
+  imports: [FormsModule,RouterModule],
+  templateUrl: './rsvp-page.component.html',
+  styleUrl: './rsvp-page.component.scss',
   animations: [
     trigger('fadeInOut', [
       state('void', style({ opacity: 0, transform: 'translateY(20px)' })),
@@ -19,7 +20,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
     ])
   ]
 })
-export class RsvpComponent {
+export class RsvpPageComponent {
   rsvp = {
     name: '',
     email: '',

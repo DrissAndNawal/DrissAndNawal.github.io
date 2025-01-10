@@ -4,12 +4,14 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { Routes, provideRouter } from '@angular/router';
 import { AppComponent } from '@app/components/app/app.component';
 import { MainPageComponent } from '@app/pages/main-page/main-page.component';
-import { RsvpComponent } from '@app/pages/rsvp/rsvp.component';
+import { MapPageComponent } from '@app/pages/map-page/map-page.component';
+import { RsvpPageComponent } from '@app/pages/rsvp-page/rsvp-page.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: MainPageComponent },
-    { path: 'rsvp', component: RsvpComponent },
+    { path: 'rsvp', component: RsvpPageComponent },
+    { path: 'map', component: MapPageComponent },
     { path: '**', redirectTo: '/home' },
 ];
 

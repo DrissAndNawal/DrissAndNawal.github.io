@@ -1,0 +1,62 @@
+<!-- map.component.html -->
+<header class="header">
+  <nav class="nav-container">
+    <a routerLink="/map" class="nav-link">Map</a>
+    <a routerLink="/songs" class="nav-link">Songs</a>
+    <a routerLink="/attendees" class="nav-link">Attendees</a>
+    <a routerLink="/media" class="nav-link">Media</a>
+    <div class="arrow-container">
+      <a href="/home"  class="arrow-link">
+        <button class="cta">
+          <svg
+            id="arrow-horizontal"
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="10"
+            viewBox="0 0 46 16"
+          >
+            <path
+              id="Path_10"
+              data-name="Path 10"
+              d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+              transform="translate(30)"
+              fill="white"
+            ></path>
+          </svg>
+        </button>
+      </a>
+    </div>
+  </nav>
+</header>
+
+<section class="map-section">
+  <div class="map-container" @fadeInOut>
+    <div class="sidebar">
+      <h2 class="section-title">Discover Tunis</h2>
+      <div class="categories">
+        <div 
+          *ngFor="let cat of categories" 
+          class="category-item"
+          [class.active]="selectedCategory === cat.id"
+          (click)="onCategoryChange(cat.id)">
+          {{ cat.label }}
+        </div>
+      </div>
+      <div class="locations-list">
+        <div class="place-card" *ngFor="let location of getFilteredLocations()" (click)="onLocationSelect(location)" [class.selected]="selectedLocation === location.name">
+          <div class="image-container">
+            <img [src]="location.image" [alt]="location.name">
+          </div>
+          <div class="content">
+            <h3>{{ location.name }}</h3>
+            <p>{{ location.description }}</p>
+            <p class="address">{{ location.address }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="map">
+      <div id="map"></div>
+    </div>
+  </div>
+</section>

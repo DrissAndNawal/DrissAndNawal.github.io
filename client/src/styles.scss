@@ -77,3 +77,121 @@ app-rsvp {
     height: -webkit-fill-available;
     width: -webkit-fill-available;
 }
+
+:host {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+  width: -webkit-fill-available;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  padding: 1rem;
+}
+
+.nav-container {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 50%;
+    background: $quaternary-color;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  &:hover:after {
+    width: 100%;
+  }
+}
+
+.hero {
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  background: linear-gradient(45deg, $primary-color, $secondary-color, $tertiary-color, $quaternary-color, $quinary-color, $senary-color);
+  background-size: 300% 300%;
+  background-repeat: no-repeat;
+  animation: gradientAnimation 16s ease infinite;
+  margin: 0;
+  padding: 0;
+}
+
+.cta {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: white;
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.arrow-link {
+  display: contents;
+}
