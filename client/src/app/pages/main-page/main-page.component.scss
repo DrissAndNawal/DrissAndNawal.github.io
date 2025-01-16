@@ -13,7 +13,7 @@ $black: #000000;
   bottom: 0;
   z-index: 1000;
   transition: all 0.3s ease;
-  padding: 1rem;
+  padding: 20px;
 }
 
 .hero-content {
@@ -81,4 +81,32 @@ $black: #000000;
       font-size: 2rem;
     }
   }
+}
+
+.about {
+  position: fixed;
+  right: 20px;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 100px;
+  background-color: #0000008a;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  margin-left: -85px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.about:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
 }
