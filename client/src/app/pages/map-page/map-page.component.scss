@@ -13,6 +13,9 @@ body {
 
 .header {
   padding: 0;
+  background: linear-gradient(45deg, $primary-color, $secondary-color, $tertiary-color, $quaternary-color, $quinary-color, $senary-color);
+  background-size: 300% 300%;
+  animation: gradientAnimation 16s ease infinite;
 }
 
 .nav-container {
@@ -24,9 +27,6 @@ body {
 
 .map-section {
   height: 100vh;
-  background: linear-gradient(45deg, $primary-color, $secondary-color, $tertiary-color, $quaternary-color, $quinary-color, $senary-color);
-  background-size: 300% 300%;
-  animation: gradientAnimation 16s ease infinite;
   margin-top: 60px;
 }
 

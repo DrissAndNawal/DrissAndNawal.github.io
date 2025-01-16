@@ -110,6 +110,13 @@ export class MapPageComponent implements OnInit, OnDestroy {
       source: this.vectorSource
     });
 
+    // const tileLayer = new TileLayer({
+    //   source: new OSM({
+    //     url: 'https://api.maptiler.com/maps/basic-v2/?key=DpdaAPg0DvqmEBO40rXr#0.8/7.06080/-8.31707',
+    //     crossOrigin: 'anonymous',
+    //   }),
+    // });
+
     this.map = new Map({
       target: 'map',
       layers: [
