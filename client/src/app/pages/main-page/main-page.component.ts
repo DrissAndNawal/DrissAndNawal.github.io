@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { HeartAnimationComponent } from '@app/components/heart-animation/heart-animation.component';
 
@@ -9,7 +8,7 @@ import { HeartAnimationComponent } from '@app/components/heart-animation/heart-a
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.scss'],
   standalone: true,
-  imports: [CommonModule, RouterModule, HeartAnimationComponent],
+  imports: [CommonModule, HeartAnimationComponent],
   animations: [
     trigger('fadeInOut', [
       state('void', style({ opacity: 0, transform: 'translateY(20px)' })),

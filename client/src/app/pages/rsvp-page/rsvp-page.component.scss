@@ -39,15 +39,7 @@ $black: #000000;
   font-size: 2.5rem;
   color: $quaternary-color;
   margin: 0;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
   margin-bottom: 10px;
-}
-
-.rsvp-text {
-  grid-column: 2;
-  text-align: center;
 }
 
 .arrow-container {

@@ -5,6 +5,7 @@ import { Routes, provideRouter } from '@angular/router';
 import { AppComponent } from '@app/components/app/app.component';
 import { MainPageComponent } from '@app/pages/main-page/main-page.component';
 import { MapPageComponent } from '@app/pages/map-page/map-page.component';
+import { MediaPageComponent } from '@app/pages/media-page/media-page.component';
 import { RsvpPageComponent } from '@app/pages/rsvp-page/rsvp-page.component';
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
     { path: 'home', component: MainPageComponent },
     { path: 'rsvp', component: RsvpPageComponent },
     { path: 'map', component: MapPageComponent },
+    { path: 'media', component: MediaPageComponent },
     { path: '**', redirectTo: '/home' },
 ];
 

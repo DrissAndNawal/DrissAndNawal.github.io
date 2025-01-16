@@ -4,4 +4,5 @@ export interface Location {
   address: string;
   image: string;
   category: string;
+  coordinates: [number, number]; // [longitude, latitude]
 }
