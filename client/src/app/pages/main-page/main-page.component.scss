@@ -9,6 +9,7 @@ $black: #000000;
 
 .rsvp {
   width: -webkit-fill-available;
+  width: -moz-available;
   position: fixed;
   bottom: 0;
   z-index: 1000;

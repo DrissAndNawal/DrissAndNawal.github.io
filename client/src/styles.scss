@@ -72,6 +72,7 @@ app-rsvp {
 
 .header {
   width: -webkit-fill-available;
+  width: -moz-available;
   position: fixed;
   top: 0;
   z-index: 1000;
