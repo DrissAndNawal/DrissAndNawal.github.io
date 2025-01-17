@@ -17,8 +17,8 @@ $black: #000000;
 }
 
 .hero-content {
-  width: -webkit-fill-available;
-  height: -webkit-fill-available;
+  height: 100vh;
+  width: 100vw;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   display: flex;
   flex-direction: column;
@@ -28,41 +28,41 @@ $black: #000000;
 
 .names {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 4rem;
-  margin-bottom: 1rem;
+  font-size: 64px;
+  margin-bottom: 16px;
   
   span {
     display: block;
     
     &:nth-child(2) {
-      font-size: 2rem;
-      margin: 1rem 0;
+      font-size: 32px;
+      margin: 16px 0;
     }
   }
 }
 
 .date-location {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+  font-size: 24px;
+  margin-bottom: 32px;
 }
 
 .countdown {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  margin-top: 3rem;
+  gap: 32px;
+  margin-top: 48px;
   
   .countdown-item {
     text-align: center;
     
     .number {
-      font-size: 2.5rem;
+      font-size: 40px;
       font-weight: 300;
       color: #d4af37;
     }
     
     .label {
-      font-size: 0.9rem;
+      font-size: 14.4px;
       text-transform: uppercase;
       letter-spacing: 2px;
     }
@@ -71,14 +71,14 @@ $black: #000000;
 
 @media (max-width: 768px) {
   .names {
-    font-size: 3rem;
+    font-size: 48px;
   }
   
   .countdown {
-    gap: 1rem;
+    gap: 16px;
     
     .countdown-item .number {
-      font-size: 2rem;
+      font-size: 32px;
     }
   }
 }

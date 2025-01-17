@@ -8,61 +8,61 @@ $light-color: #FFF5EE;
 $black: #000000;
 
 *:focus {
-    outline: none;
-    box-shadow: none;
+  outline: none;
+  box-shadow: none;
 }
 
 * {
-    user-select: none;
+  user-select: none;
 }
 
 html {
-    background-color: $quaternary-color;
-    overflow-x: hidden;
-    height: 100vh;
+  background-color: $quaternary-color;
+  overflow-x: hidden;
+  height: 100vh;
 }
 
 html,
 app-root,
 body {
-    height: -webkit-fill-available;
-    width: -webkit-fill-available;
-    margin: 0;
-    padding: 0;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Roboto, 'Helvetica Neue', sans-serif;
-    color: $black;
-    overflow: hidden;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  color: $black;
+  overflow: hidden;
 }
 
 @keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }
 
 footer {
-    user-select: none;
-    display: flex;
-    justify-content: center;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 10px 0;
-    letter-spacing: 2px;
-    text-shadow: 0 0 4px black;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px 0;
+  letter-spacing: 2px;
+  text-shadow: 0 0 4px black;
 }
 
 app-rsvp {
-    height: -webkit-fill-available;
-    width: -webkit-fill-available;
+  height: 100vh;
+  width: 100vw;
 }
 
 :host {
@@ -84,13 +84,13 @@ app-rsvp {
   margin: 0;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 32px;
 }
 
 .nav-link {
   color: white;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 18px;
   transition: all 0.3s ease;
   position: relative;
   cursor: pointer;
@@ -113,8 +113,8 @@ app-rsvp {
 }
 
 .hero {
-  width: -webkit-fill-available;
-  height: -webkit-fill-available;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
