@@ -59,10 +59,26 @@ export class MapPageComponent implements OnInit, OnDestroy {
       {
         name: 'Four Seasons Tunis',
         description: 'Luxury beachfront hotel',
-        address: 'Zone Touristique Gammarth, 1057',
-        image: '/assets/map/hotel1.jpg',
+        address: '1057 La Marsa, Gammarth 1057, Tunisia',
+        image: '/assets/map/four-seasons.jpg',
         category: 'hotels',
-        coordinates: [10.2897, 36.9231]
+        coordinates: [10.288643, 36.909057]
+      },
+      {
+        name: 'Movenpick Gammarth',
+        description: 'Luxury beachfront hotel',
+        address: 'B P 36, Av. Taieb Mhiri, La Marsa 2078, Tunisia',
+        image: '/assets/map/movenpick.jpg',
+        category: 'hotels',
+        coordinates: [10.3189597, 36.8980332]
+      },
+      {
+        name: 'Ambassadeurs',
+        description: 'Downtown three-star hotel',
+        address: '75 Av. Taieb M\'Hiri, Tunis 1002, Tunisia',
+        image: '/assets/map/ambassadeurs.jpg',
+        category: 'hotels',
+        coordinates: [10.176756, 36.817326]
       }
     ],
     restaurants: [
@@ -70,9 +86,17 @@ export class MapPageComponent implements OnInit, OnDestroy {
         name: 'Dar El Jeld',
         description: 'Traditional Tunisian cuisine',
         address: '5-10 Rue Dar El Jeld, Tunis',
-        image: '/assets/map/restaurant1.jpg',
+        image: '/assets/map/dar-el-jeld.jpg',
         category: 'restaurants',
         coordinates: [10.1711, 36.7988]
+      },
+      {
+        name: 'El Ali',
+        description: 'Delicious Seafood cuisine',
+        address: 'Rue Jamaa Ez Zitouna, Tunis',
+        image: '/assets/map/el-ali.jpg',
+        category: 'restaurants',
+        coordinates: [10.16579, 36.81897]
       }
     ],
     attractions: [
@@ -82,7 +106,15 @@ export class MapPageComponent implements OnInit, OnDestroy {
         address: 'Medina, Tunis',
         image: '/assets/map/medina.jpg',
         category: 'attractions',
-        coordinates: [10.1700, 36.7988]
+        coordinates: [10.166735, 36.798092]
+      },
+      {
+        name: 'Ruins of Ancient Carthage',
+        description: 'Archaeological Site of Carthage',
+        address: 'Carthage, Gouvernorat de Tunis, Tunisias',
+        image: '/assets/map/ancient-carthage.jpg',
+        category: 'attractions',
+        coordinates: [10.33161, 36.86108]
       }
     ]
   };
