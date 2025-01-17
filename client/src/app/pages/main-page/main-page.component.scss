@@ -18,8 +18,9 @@ $black: #000000;
 }
 
 .hero-content {
-  height: 100vh;
-  width: 100vw;
+  height: inherit;
+  width: -webkit-fill-available;
+  width: -moz-available;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   display: flex;
   flex-direction: column;

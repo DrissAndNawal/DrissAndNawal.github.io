@@ -8,9 +8,9 @@ $light-color: #FFF5EE;
 $black: #000000;
 
 .rsvp {
-  margin: 0;
-  height: 100vh;
-  width: 100vw;
+  height: inherit;
+  width: -webkit-fill-available;
+  width: -moz-available;
   display: flex;
   flex-direction: column;
   justify-content: center;
