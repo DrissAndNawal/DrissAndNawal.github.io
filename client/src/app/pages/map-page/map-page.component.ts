@@ -39,20 +39,20 @@ export class MapPageComponent implements OnInit, OnDestroy {
   locations: Record<string, Location[]> = {
     wedding: [
       {
-        name: 'Wedding Ceremony Venue',
+        name: 'Salle Mawazine',
         description: 'The main ceremony and celebration venue',
-        address: 'Tunis, Tunisia',
-        image: '/assets/map/venue.jpg',
+        address: '9HW6+XF6, Hammamet Sud, Tunisia',
+        image: '/assets/map/mawazine.jpg',
         category: 'wedding',
-        coordinates: [10.1815, 36.8065]
+        coordinates: [10.614119, 36.396192]
       },
       {
-        name: "Grandmother's House",
+        name: "Espace Nahawand",
         description: 'Traditional Henna ceremony location',
-        address: 'Tunis, Tunisia',
-        image: '/assets/map/henna.jpg',
+        address: '2 rue 13 Aout , chotrana 2 La soukra, 2036, Tunisia',
+        image: '/assets/map/espace-nahawand.jpg',
         category: 'wedding',
-        coordinates: [10.1815, 36.8065]
+        coordinates: [10.201597, 36.874621]
       }
     ],
     hotels: [
@@ -191,6 +191,7 @@ export class MapPageComponent implements OnInit, OnDestroy {
 
   onCategoryChange(category: string) {
     this.selectedCategory = category;
+    this.onLocationSelect(this.locations[this.selectedCategory][0]);
     this.updateMapMarkers();
   }
 
