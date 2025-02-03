@@ -33,9 +33,8 @@ export class MapPageComponent implements OnInit, OnDestroy {
   private vectorSource!: VectorSource;
   private vectorLayer!: VectorLayer<VectorSource>;
   selectedCategory: string = 'wedding';
-  selectedLocation: string = 'Wedding Ceremony Venue';
+  selectedLocation: string = 'Salle Mawazine';
   
-  // Add coordinates to your locations
   locations: Record<string, Location[]> = {
     wedding: [
       {
@@ -71,14 +70,6 @@ export class MapPageComponent implements OnInit, OnDestroy {
         image: '/assets/map/movenpick.jpg',
         category: 'hotels',
         coordinates: [10.3189597, 36.8980332]
-      },
-      {
-        name: 'Ambassadeurs',
-        description: 'Downtown three-star hotel',
-        address: '75 Av. Taieb M\'Hiri, Tunis 1002, Tunisia',
-        image: '/assets/map/ambassadeurs.jpg',
-        category: 'hotels',
-        coordinates: [10.176756, 36.817326]
       }
     ],
     restaurants: [
@@ -113,6 +104,14 @@ export class MapPageComponent implements OnInit, OnDestroy {
         description: 'Archaeological Site of Carthage',
         address: 'Carthage, Gouvernorat de Tunis, Tunisias',
         image: '/assets/map/ancient-carthage.jpg',
+        category: 'attractions',
+        coordinates: [10.33161, 36.86108]
+      },
+      {
+        name: 'Hammamet Beach',
+        description: 'Fabulous beach in the south of "old Hammamet"',
+        address: '9JV9+C8P, Blvd. Ibn el Fourat, Hammamet, Tunisia',
+        image: '/assets/map/hammamet-beach.jpg',
         category: 'attractions',
         coordinates: [10.33161, 36.86108]
       }
@@ -158,7 +157,7 @@ export class MapPageComponent implements OnInit, OnDestroy {
         this.vectorLayer
       ],
       view: new View({
-        center: fromLonLat([10.1815, 36.8065]),
+        center: fromLonLat([10.614119, 36.396192]),
         zoom: 13
       })
     });

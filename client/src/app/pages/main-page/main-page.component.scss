@@ -18,20 +18,17 @@ $black: #000000;
 }
 
 .hero-content {
-  height: inherit;
   width: -webkit-fill-available;
   width: -moz-available;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
 .names {
   font-family: 'Cormorant Garamond', serif;
   font-size: 64px;
-  margin-bottom: 16px;
   
   span {
     display: block;
@@ -111,4 +108,11 @@ $black: #000000;
 .about:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
+}
+
+.dates {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
 }
