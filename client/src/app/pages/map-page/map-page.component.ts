@@ -113,7 +113,7 @@ export class MapPageComponent implements OnInit, OnDestroy {
         address: '9JV9+C8P, Blvd. Ibn el Fourat, Hammamet, Tunisia',
         image: '/assets/map/hammamet-beach.jpg',
         category: 'attractions',
-        coordinates: [10.33161, 36.86108]
+        coordinates: [10.623643, 36.397510]
       }
     ]
   };
