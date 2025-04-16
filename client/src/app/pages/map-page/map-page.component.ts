@@ -74,8 +74,47 @@ export class MapPageComponent implements OnInit, OnDestroy {
           image: '/assets/map/rbnb1.png',
           category: 'airbnbs',
           coordinates: [10.330463, 36.853806]
-        }
-        // ...other Tunis airbnbs
+        },
+        {
+          name: 'Typique maison riad',
+          description: '2 chambres, 3 lits',
+          address: 'https://fr.airbnb.ca/rooms/1277557849261723547?viralityEntryPoint=1&s=76',
+          image: '/assets/map/rbnb2.png',
+          category: 'airbnbs',
+          coordinates: [10.330463, 36.853806]
+        },
+        {
+          name: 'Petite Maison de charme',
+          description: '2 chambres, 3 lits',
+          address: 'https://fr.airbnb.ca/rooms/722922109419252805?viralityEntryPoint=1&s=76',
+          image: '/assets/map/rbnb3.png',
+          category: 'airbnbs',
+          coordinates: [10.330463, 36.853806]
+        },
+        {
+          name: 'Demeure surélevée avec vues imprenables',
+          description: '2 chambres, 3 lits (reserved by the bride’s friends)',
+          address: 'https://fr.airbnb.ca/rooms/866049057117056673?viralityEntryPoint=1&s=76',
+          image: '/assets/map/rbnb4.png',
+          category: 'airbnbs',
+          coordinates: [10.330463, 36.853806]
+        },
+        {
+          name: 'La Maison de l’Authenticité',
+          description: '3 chambres, 5 lits',
+          address: 'https://fr.airbnb.ca/rooms/1257195639958574589?viralityEntryPoint=1&s=76',
+          image: '/assets/map/rbnb5.png',
+          category: 'airbnbs',
+          coordinates: [10.330463, 36.853806]
+        },
+        {
+          name: 'Villa vue mer à La Marsa',
+          description: '4 chambres, 5 lits',
+          address: 'https://fr.airbnb.ca/rooms/722349788565587188?viralityEntryPoint=1&s=76',
+          image: '/assets/map/rbnb6.png',
+          category: 'airbnbs',
+          coordinates: [10.330463, 36.853806]
+        },
       ],
       restaurants: [
         {
