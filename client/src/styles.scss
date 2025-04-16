@@ -1,10 +1,10 @@
-$primary-color: #FFC0CB;
-$secondary-color: #FFB6C1;
-$tertiary-color: #FF69B4;
-$quaternary-color: #FF1493;
-$quinary-color: #FFF0F5;
-$senary-color: #FFFFFF;
-$light-color: #FFF5EE;
+$primary-color: #5F9EA0;
+$secondary-color: #4682B4;
+$tertiary-color: #1E90FF;
+$quaternary-color: #00BFFF;
+$quinary-color: #B0E0E6;
+$senary-color: #E0FFFF;
+$light-color: #F0FFFF;
 $black: #000000;
 
 *:focus {
@@ -39,6 +39,15 @@ body {
   background-size: 300% 300%;
   background-repeat: no-repeat;
   animation: gradientAnimation 12s ease infinite;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    background: url('./assets/landing-page.png') no-repeat center center;
+    background-size: cover;
+    animation: none;
+  }
 }
 
 @keyframes gradientAnimation {

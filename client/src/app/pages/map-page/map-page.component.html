@@ -9,7 +9,10 @@
 <section class="map-section">
   <div class="map-container" @fadeInOut>
     <div class="sidebar">
-      <h2 class="section-title">Discover The Area</h2>
+      <h2 class="section-title">
+        Discover  
+        <button (click)="toggleCity()">{{ currentCity }}</button>
+      </h2>
       <div class="categories">
         <div 
           *ngFor="let cat of categories" 

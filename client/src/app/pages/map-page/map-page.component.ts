@@ -34,138 +34,120 @@ export class MapPageComponent implements OnInit, OnDestroy {
   private vectorLayer!: VectorLayer<VectorSource>;
   selectedCategory: string = 'wedding';
   selectedLocation: string = 'Salle Mawazine';
-  
-  locations: Record<string, Location[]> = {
-    wedding: [
-      {
-        name: "Espace Nahawand",
-        description: 'Wedding dinner and Henna ceremony',
-        address: '2 rue 13 Aout , chotrana 2 La soukra, 2036, Tunisia',
-        image: '/assets/map/espace-nahawand.jpg',
-        category: 'wedding',
-        coordinates: [10.201597, 36.874621]
-      },
-      {
-        name: 'Salle Mawazine',
-        description: 'The main ceremony and celebration venue',
-        address: '9HW6+XF6, Hammamet Sud, Tunisia',
-        image: '/assets/map/mawazine.jpg',
-        category: 'wedding',
-        coordinates: [10.614119, 36.396192]
-      }
-    ],
-    hotels: [
-      {
-        name: 'Four Seasons Tunis',
-        description: 'Luxury beachfront hotel',
-        address: '1057 La Marsa, Gammarth 1057, Tunisia',
-        image: '/assets/map/four-seasons.jpg',
-        category: 'hotels',
-        coordinates: [10.288643, 36.909057]
-      },
-      {
-        name: 'Movenpick Gammarth',
-        description: 'Luxury beachfront hotel',
-        address: 'B P 36, Av. Taieb Mhiri, La Marsa 2078, Tunisia',
-        image: '/assets/map/movenpick.jpg',
-        category: 'hotels',
-        coordinates: [10.3189597, 36.8980332]
-      }
-    ],
-    airbnbs: [
-      {
-        name: 'Terrasse sur les toits',
-        description: '1 chambre, 2 lits',
-        address: 'https://fr.airbnb.ca/rooms/54101134?viralityEntryPoint=1&s=76',
-        image: '/assets/map/rbnb1.png',
-        category: 'airbnbs',
-        coordinates: [10.330463, 36.853806]
-      },
-      {
-        name: 'Typique maison riad',
-        description: '2 chambres, 3 lits',
-        address: 'https://fr.airbnb.ca/rooms/1277557849261723547?viralityEntryPoint=1&s=76',
-        image: '/assets/map/rbnb2.png',
-        category: 'airbnbs',
-        coordinates: [10.330463, 36.853806]
-      },
-      {
-        name: 'Petite Maison de charme',
-        description: '2 chambres, 3 lits',
-        address: 'https://fr.airbnb.ca/rooms/722922109419252805?viralityEntryPoint=1&s=76',
-        image: '/assets/map/rbnb3.png',
-        category: 'airbnbs',
-        coordinates: [10.330463, 36.853806]
-      },
-      {
-        name: 'Demeure surélevée avec vues imprenables',
-        description: '2 chambres, 3 lits (reserved by the bride’s friends)',
-        address: 'https://fr.airbnb.ca/rooms/866049057117056673?viralityEntryPoint=1&s=76',
-        image: '/assets/map/rbnb4.png',
-        category: 'airbnbs',
-        coordinates: [10.330463, 36.853806]
-      },
-      {
-        name: 'La Maison de l’Authenticité',
-        description: '3 chambres, 5 lits',
-        address: 'https://fr.airbnb.ca/rooms/1257195639958574589?viralityEntryPoint=1&s=76',
-        image: '/assets/map/rbnb5.png',
-        category: 'airbnbs',
-        coordinates: [10.330463, 36.853806]
-      },
-      {
-        name: 'Villa vue mer à La Marsa',
-        description: '4 chambres, 5 lits',
-        address: 'https://fr.airbnb.ca/rooms/722349788565587188?viralityEntryPoint=1&s=76',
-        image: '/assets/map/rbnb6.png',
-        category: 'airbnbs',
-        coordinates: [10.330463, 36.853806]
-      },
-    ],
-    restaurants: [
-      {
-        name: 'Dar El Jeld',
-        description: 'Traditional Tunisian cuisine',
-        address: '5-10 Rue Dar El Jeld, Tunis',
-        image: '/assets/map/dar-el-jeld.jpg',
-        category: 'restaurants',
-        coordinates: [10.1711, 36.7988]
-      },
-      {
-        name: 'El Ali',
-        description: 'Delicious Seafood cuisine',
-        address: 'Rue Jamaa Ez Zitouna, Tunis',
-        image: '/assets/map/el-ali.jpg',
-        category: 'restaurants',
-        coordinates: [10.16579, 36.81897]
-      }
-    ],
-    attractions: [
-      {
-        name: 'Medina of Tunis',
-        description: 'UNESCO World Heritage site',
-        address: 'Medina, Tunis',
-        image: '/assets/map/medina.jpg',
-        category: 'attractions',
-        coordinates: [10.166735, 36.798092]
-      },
-      {
-        name: 'Ruins of Ancient Carthage',
-        description: 'Archaeological Site of Carthage',
-        address: 'Carthage, Gouvernorat de Tunis, Tunisias',
-        image: '/assets/map/ancient-carthage.jpg',
-        category: 'attractions',
-        coordinates: [10.33161, 36.86108]
-      },
-      {
-        name: 'Hammamet Beach',
-        description: 'Fabulous beach in the south of "old Hammamet"',
-        address: '9JV9+C8P, Blvd. Ibn el Fourat, Hammamet, Tunisia',
-        image: '/assets/map/hammamet-beach.jpg',
-        category: 'attractions',
-        coordinates: [10.623643, 36.397510]
-      }
-    ]
+  currentCity: 'Tunis' | 'Hammamet' = 'Tunis';
+
+  allLocations: Record<string, Record<string, Location[]>> = {
+    Tunis: {
+      wedding: [
+        {
+          name: "Espace Nahawand",
+          description: 'Wedding dinner and Henna ceremony',
+          address: '2 rue 13 Aout , chotrana 2 La soukra, 2036, Tunisia',
+          image: '/assets/map/espace-nahawand.jpg',
+          category: 'wedding',
+          coordinates: [10.201597, 36.874621]
+        }
+      ],
+      hotels: [
+        {
+          name: 'Four Seasons Tunis',
+          description: 'Luxury beachfront hotel',
+          address: '1057 La Marsa, Gammarth 1057, Tunisia',
+          image: '/assets/map/four-seasons.jpg',
+          category: 'hotels',
+          coordinates: [10.288643, 36.909057]
+        },
+        {
+          name: 'Movenpick Gammarth',
+          description: 'Luxury beachfront hotel',
+          address: 'B P 36, Av. Taieb Mhiri, La Marsa 2078, Tunisia',
+          image: '/assets/map/movenpick.jpg',
+          category: 'hotels',
+          coordinates: [10.3189597, 36.8980332]
+        }
+      ],
+      airbnbs: [
+        {
+          name: 'Terrasse sur les toits',
+          description: '1 chambre, 2 lits',
+          address: 'https://fr.airbnb.ca/rooms/54101134?viralityEntryPoint=1&s=76',
+          image: '/assets/map/rbnb1.png',
+          category: 'airbnbs',
+          coordinates: [10.330463, 36.853806]
+        }
+        // ...other Tunis airbnbs
+      ],
+      restaurants: [
+        {
+          name: 'Dar El Jeld',
+          description: 'Traditional Tunisian cuisine',
+          address: '5-10 Rue Dar El Jeld, Tunis',
+          image: '/assets/map/dar-el-jeld.jpg',
+          category: 'restaurants',
+          coordinates: [10.1711, 36.7988]
+        }
+      ],
+      attractions: [
+        {
+          name: 'Medina of Tunis',
+          description: 'UNESCO World Heritage site',
+          address: 'Medina, Tunis',
+          image: '/assets/map/medina.jpg',
+          category: 'attractions',
+          coordinates: [10.166735, 36.798092]
+        }
+      ]
+    },
+    Hammamet: {
+      wedding: [
+        {
+          name: 'Salle Mawazine',
+          description: 'The main ceremony and celebration venue',
+          address: '9HW6+XF6, Hammamet Sud, Tunisia',
+          image: '/assets/map/mawazine.jpg',
+          category: 'wedding',
+          coordinates: [10.614119, 36.396192]
+        }
+      ],
+      hotels: [
+        {
+          name: 'One Resort Premium',
+          description: 'Luxury beachfront hotel',
+          address: "Bd de l'environnement, Route Touristique, Hammamet 8050, Tunisie",
+          image: '/assets/map/one-resort.jpg',
+          category: 'hotels',
+          coordinates: [9.015375, 33.439644]
+        },
+        {
+          name: 'La Badira',
+          description: 'Luxury adult only hotel',
+          address: 'Route Touristique Nord BP437 Hammamet, Mrezga 8050, Tunisie',
+          image: '/assets/map/la-badira.jpg',
+          category: 'hotels',
+          coordinates: [10.564577, 36.421741]
+        },
+        {
+          name: 'Radisson Blu',
+          description: 'Luxury beachfront hotel',
+          address: 'Avenue Hedi Nouira, Hammamet 8050, Tunisie',
+          image: '/assets/map/four-seasons.jpg',
+          category: 'hotels',
+          coordinates: [10.642719, 36.406024]
+        }
+      ],
+      airbnbs: [],
+      restaurants: [],
+      attractions: [
+        {
+          name: 'Hammamet Beach',
+          description: 'Fabulous beach in the south of "old Hammamet"',
+          address: '9JV9+C8P, Blvd. Ibn el Fourat, Hammamet, Tunisia',
+          image: '/assets/map/hammamet-beach.jpg',
+          category: 'attractions',
+          coordinates: [10.623643, 36.397510]
+        }
+      ]
+    }
   };
 
   categories = [
@@ -191,13 +173,6 @@ export class MapPageComponent implements OnInit, OnDestroy {
     this.vectorLayer = new VectorLayer({
       source: this.vectorSource
     });
-
-    // const tileLayer = new TileLayer({
-    //   source: new OSM({
-    //     url: 'https://api.maptiler.com/maps/basic-v2/?key=DpdaAPg0DvqmEBO40rXr#0.8/7.06080/-8.31707',
-    //     crossOrigin: 'anonymous',
-    //   }),
-    // });
 
     this.map = new Map({
       target: 'map',
@@ -239,15 +214,29 @@ export class MapPageComponent implements OnInit, OnDestroy {
     });
   }
 
+  toggleCity() {
+    this.currentCity = this.currentCity === 'Tunis' ? 'Hammamet' : 'Tunis';
+    const availableCategories = Object.keys(this.allLocations[this.currentCity]);
+    this.selectedCategory = availableCategories.includes(this.selectedCategory) ? this.selectedCategory : availableCategories[0];
+    const defaultLocation = this.getFilteredLocations()[0];
+    if (defaultLocation) {
+      this.onLocationSelect(defaultLocation);
+    }
+    this.updateMapMarkers();
+  }
+
   onCategoryChange(category: string) {
     this.selectedCategory = category;
-    this.onLocationSelect(this.locations[this.selectedCategory][0]);
+    const defaultLocation = this.getFilteredLocations()[0];
+    if (defaultLocation) {
+      this.onLocationSelect(defaultLocation);
+    }
     this.updateMapMarkers();
   }
 
   onLocationSelect(location: Location) {
     this.selectedLocation = location.name;
-    navigator.clipboard.writeText(location.address)
+    navigator.clipboard.writeText(location.address);
     if (location.coordinates) {
       this.map.getView().animate({
         center: fromLonLat(location.coordinates),
@@ -258,6 +247,6 @@ export class MapPageComponent implements OnInit, OnDestroy {
   }
 
   getFilteredLocations(): Location[] {
-    return this.locations[this.selectedCategory] || [];
+    return this.allLocations[this.currentCity][this.selectedCategory] || [];
   }
 }
