@@ -7,15 +7,15 @@ $senary-color: #FFFFFF;
 $light-color: #FFF5EE;
 $black: #000000;
 
-.header {
-  height: 4% !important;
-  position: relative !important;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-}
+// .header {
+//   height: 4% !important;
+//   position: relative !important;
+//   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+// }
 
-.hero {
-  height: 96% !important;
-}
+// .hero {
+//   height: 96% !important;
+// }
 
 .rsvp {
   width: -webkit-fill-available;
@@ -35,7 +35,7 @@ $black: #000000;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  margin-bottom: 90px;
+  // margin-bottom: 90px;
 }
 
 .names {
