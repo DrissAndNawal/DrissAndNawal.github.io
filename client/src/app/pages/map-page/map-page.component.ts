@@ -38,20 +38,20 @@ export class MapPageComponent implements OnInit, OnDestroy {
   locations: Record<string, Location[]> = {
     wedding: [
       {
+        name: "Espace Nahawand",
+        description: 'Wedding dinner and Henna ceremony',
+        address: '2 rue 13 Aout , chotrana 2 La soukra, 2036, Tunisia',
+        image: '/assets/map/espace-nahawand.jpg',
+        category: 'wedding',
+        coordinates: [10.201597, 36.874621]
+      },
+      {
         name: 'Salle Mawazine',
         description: 'The main ceremony and celebration venue',
         address: '9HW6+XF6, Hammamet Sud, Tunisia',
         image: '/assets/map/mawazine.jpg',
         category: 'wedding',
         coordinates: [10.614119, 36.396192]
-      },
-      {
-        name: "Espace Nahawand",
-        description: 'Traditional Henna ceremony location',
-        address: '2 rue 13 Aout , chotrana 2 La soukra, 2036, Tunisia',
-        image: '/assets/map/espace-nahawand.jpg',
-        category: 'wedding',
-        coordinates: [10.201597, 36.874621]
       }
     ],
     hotels: [
@@ -71,6 +71,56 @@ export class MapPageComponent implements OnInit, OnDestroy {
         category: 'hotels',
         coordinates: [10.3189597, 36.8980332]
       }
+    ],
+    airbnbs: [
+      {
+        name: 'Terrasse sur les toits',
+        description: '1 chambre, 2 lits',
+        address: 'https://fr.airbnb.ca/rooms/54101134?viralityEntryPoint=1&s=76',
+        image: '/assets/map/rbnb1.png',
+        category: 'airbnbs',
+        coordinates: [10.330463, 36.853806]
+      },
+      {
+        name: 'Typique maison riad',
+        description: '2 chambres, 3 lits',
+        address: 'https://fr.airbnb.ca/rooms/1277557849261723547?viralityEntryPoint=1&s=76',
+        image: '/assets/map/rbnb2.png',
+        category: 'airbnbs',
+        coordinates: [10.330463, 36.853806]
+      },
+      {
+        name: 'Petite Maison de charme',
+        description: '2 chambres, 3 lits',
+        address: 'https://fr.airbnb.ca/rooms/722922109419252805?viralityEntryPoint=1&s=76',
+        image: '/assets/map/rbnb3.png',
+        category: 'airbnbs',
+        coordinates: [10.330463, 36.853806]
+      },
+      {
+        name: 'Demeure surélevée avec vues imprenables',
+        description: '2 chambres, 3 lits (reserved by the bride’s friends)',
+        address: 'https://fr.airbnb.ca/rooms/866049057117056673?viralityEntryPoint=1&s=76',
+        image: '/assets/map/rbnb4.png',
+        category: 'airbnbs',
+        coordinates: [10.330463, 36.853806]
+      },
+      {
+        name: 'La Maison de l’Authenticité',
+        description: '3 chambres, 5 lits',
+        address: 'https://fr.airbnb.ca/rooms/1257195639958574589?viralityEntryPoint=1&s=76',
+        image: '/assets/map/rbnb5.png',
+        category: 'airbnbs',
+        coordinates: [10.330463, 36.853806]
+      },
+      {
+        name: 'Villa vue mer à La Marsa',
+        description: '4 chambres, 5 lits',
+        address: 'https://fr.airbnb.ca/rooms/722349788565587188?viralityEntryPoint=1&s=76',
+        image: '/assets/map/rbnb6.png',
+        category: 'airbnbs',
+        coordinates: [10.330463, 36.853806]
+      },
     ],
     restaurants: [
       {
@@ -120,7 +170,8 @@ export class MapPageComponent implements OnInit, OnDestroy {
 
   categories = [
     { id: 'wedding', label: 'Wedding Venues' },
-    { id: 'hotels', label: 'Accommodations' },
+    { id: 'hotels', label: 'Hotels' },
+    { id: 'airbnbs', label: 'Airbnbs' },
     { id: 'restaurants', label: 'Restaurants' },
     { id: 'attractions', label: 'Attractions' }
   ];
