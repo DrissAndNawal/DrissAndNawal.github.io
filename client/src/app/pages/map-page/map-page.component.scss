@@ -52,8 +52,9 @@ body {
     justify-items: center;
     // font-family: 'Cormorant Garamond', serif;
     color: $quaternary-color;
-    font-size: 40px;
+    font-size: 1.75rem;
     margin: 0;
+    text-transform: uppercase;
     margin-bottom: 32px;
     text-align: center;
   }
@@ -75,12 +76,14 @@ body {
 
 .categories {
   display: flex;
+  justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
   margin-bottom: 32px;
 }
 
 .category-item {
+  text-align: center;
   padding: 12.8px 34px;
   border-radius: 25px;
   background: white;
@@ -201,7 +204,6 @@ body {
     padding: 1rem;
 
     .section-title {
-      font-size: 2rem;
       margin-bottom: 1rem;
     }
   }
@@ -209,16 +211,13 @@ body {
   .map {
     height: 50%;
   }
-  
-  .categories {
-    justify-content: center;
-  }
 
   #Path_10 {
     fill: black;
   }
 
   .category-item {
+    width: 25%;
     padding: 0.5rem;
   }
 
@@ -293,37 +292,4 @@ button {
 button:active {
   box-shadow: none;
   transform: translate(3px, 3px);
-}
-
-
-.options-container {
-  display: contents;
-  width: 100%;
-}
-
-.options {
-  animation: appear 0.3s ease forwards;
-  box-shadow: 0 0 5px #f8c0cb, 0 0 2px #f8c0cb;
-  user-select: none;
-  display: flex;
-  justify-content: space-between;
-  background-color: #4CAF50;
-  border-radius: 50px;
-  overflow: hidden;
-  width: 100%;
-}
-
-.option {
-  width: 33%;
-  border: none;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  cursor: pointer;
-  background-color: transparent;
-  transition: background-color 0.3s ease;
-}
-
-.option.selected {
-  background-color: rgba(0, 0, 0, 0.1);
 }
