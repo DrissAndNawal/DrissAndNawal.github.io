@@ -46,7 +46,11 @@ body {
   overflow-y: scroll;
   
   .section-title {
-    font-family: 'Cormorant Garamond', serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    // font-family: 'Cormorant Garamond', serif;
     color: $quaternary-color;
     font-size: 40px;
     margin: 0;
@@ -281,7 +285,7 @@ button {
   padding: 10px 20px;
   border-radius: 10px;
   border: 2px solid #4682B4;
-  background: #5F9EA0;
+  background: #00BFFF;
   box-shadow: 3px 3px #4682B4;
   cursor: pointer;
 }
@@ -289,4 +293,37 @@ button {
 button:active {
   box-shadow: none;
   transform: translate(3px, 3px);
+}
+
+
+.options-container {
+  display: contents;
+  width: 100%;
+}
+
+.options {
+  animation: appear 0.3s ease forwards;
+  box-shadow: 0 0 5px #f8c0cb, 0 0 2px #f8c0cb;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  background-color: #4CAF50;
+  border-radius: 50px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.option {
+  width: 33%;
+  border: none;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.option.selected {
+  background-color: rgba(0, 0, 0, 0.1);
 }

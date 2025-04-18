@@ -190,7 +190,7 @@ export class MapPageComponent implements OnInit, OnDestroy {
   };
 
   categories = [
-    { id: 'wedding', label: 'Wedding Venues' },
+    { id: 'wedding', label: 'Venues' },
     { id: 'hotels', label: 'Hotels' },
     { id: 'airbnbs', label: 'Airbnbs' },
     { id: 'restaurants', label: 'Restaurants' },
